@@ -12,8 +12,6 @@ void setup();
 void loop();
 #line 4 "c:/Users/benja/OneDrive/Desktop/visualStudioCode/summerIOT/Capstone/ArgonT/src/ArgonT.ino"
 SYSTEM_THREAD(ENABLED);
-SYSTEM_MODE(MANUAL);
-
 
 //MQTT
 void callback(char *topic, byte *payload, unsigned int length) {};
@@ -53,6 +51,7 @@ void loop() {
 	LIS3DHSample sample;
   	if (accel.getSample(sample)) {
 
+		//some tomfoolery bc publish didn't like taking in an int and sample didn't like being put into a String
 		int x = sample.x;
 		int y = sample.y;
 		int z = sample.z;

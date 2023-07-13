@@ -2,8 +2,6 @@
 #include "LIS3DH.h"
 
 SYSTEM_THREAD(ENABLED);
-SYSTEM_MODE(MANUAL);
-
 
 //MQTT
 void callback(char *topic, byte *payload, unsigned int length) {};
