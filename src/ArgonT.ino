@@ -33,7 +33,7 @@ void setup() {
     BleAdvertisingData advData;
     advData.appendServiceUUID(serviceUuid);
     BLE.advertise(&advData);
-	BLE.setAdvertisingInterval(20);
+	//BLE.setAdvertisingInterval(20);
 }
 
 void loop() {
